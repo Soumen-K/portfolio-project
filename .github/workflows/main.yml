@@ -44,6 +44,9 @@ jobs:
       - name: Deploy Artifact
         id: deployment
         uses: actions/deploy-pages@v3
+        with:
+          name: production-files
+          path: ./build
         env:  
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
